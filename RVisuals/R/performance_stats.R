@@ -13,7 +13,7 @@ perf_data <- read.csv(file.path("data", "collections_perf.csv"), header = F,
 
 
 
-perf_sumamries <- perf_data %>% group_by(collection_type) %>% 
+perf_summaries <- perf_data %>% group_by(collection_type) %>% 
   summarise(avg_fill_time = mean(fill_time),
             avg_sum_time = mean(sum_time),
             avg_fill_gc0 = mean(fill_gc0),
@@ -25,7 +25,7 @@ perf_sumamries <- perf_data %>% group_by(collection_type) %>%
             )
 
 
-perf_sumamries %>% ggplot() + 
+perf_summaries %>% ggplot() + 
   geom_col(aes(x=collection_type, y=avg_fill_time))
   
   
