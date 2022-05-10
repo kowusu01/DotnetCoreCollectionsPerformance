@@ -21,8 +21,13 @@ perf_summaries <- perf_data_long %>%
   group_by(collection_type, measure) %>% 
   summarise(avg = mean(value))
 
+
+perf_summaries
+
 # graph it
 perf_summaries %>% 
-    ggplot() + geom_col(aes(x=measure, y=avg)) + facet_grid(.~collection_type)
+    ggplot() + geom_bar(aes(x=measure, y=avg, fill=measure), stat = "identity") + 
+   facet_grid(. ~ collection_type)
+
 
 
