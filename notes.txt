@@ -1,0 +1,18 @@
+
+how to execute
+- in a command window 
+  start powershell by typing powershell
+  execue the app
+  e.g.:    .\run.ps1 -runRuns 5
+
+
+or VS Developer PowerShell window
+ - run the powershell file run.ps1
+    
+e.g. .\run.ps1 -runRuns 5
+
+params:
+ - numRuns    - number of runs
+ 
+- a file called arrays_performance.csv will be created at the root folfer
+   this file will be be used by the R script to create the visualization

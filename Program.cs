@@ -8,13 +8,9 @@ namespace PerformanceTest
     class Program
     {
         public static int N = 10000000;
+        //public static int N = 100;
         static void Main(string[] args)
         {
-
-            string s = default(string);
-            int a = default(int);
-           
-
             var p = new Program();
             var array = new int[N];
             var arrayList = new ArrayList(N);
@@ -46,9 +42,6 @@ namespace PerformanceTest
                     break;
 
             }
-
-            //Console.ReadKey();
-
         }
 
         public  string TaskList(List<int> list)
@@ -79,8 +72,6 @@ namespace PerformanceTest
             var gcInfo2 = PrintGCInfo();            
             return string.Format("Generic List,{0},{1},{2},{3}", populate, summation, gcInfo1, gcInfo2);
         }
-
-        
 
         public string TaskArray(int[] array)
         {
@@ -159,7 +150,5 @@ namespace PerformanceTest
             //Console.WriteLine("Gen 0: {0}, Gen 1: {1}, Gen 2: {2}", gc0, gc1, gc2);
             return string.Format("{0},{1},{2}", gc0, gc1, gc2);
         }
-
-
     }
 }
